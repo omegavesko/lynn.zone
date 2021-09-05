@@ -122,20 +122,19 @@ const IndexPage: React.FC<IndexPageProps> = () => {
           <p>
             You're a company with an{" "}
             <Highlight>ethical business model</Highlight> that doesn't exploit
-            its users, its workers, or the planet to do what it does (and maybe
-            even does some good).
+            anyone to do what it does (and maybe even does some good).
           </p>
           <p>
             You know that the best products are made by{" "}
             <Highlight>diverse, inclusive, autonomous teams</Highlight>, and
-            that engineering is more than just a cost center.
+            that good engineering is worth investing in.
           </p>
         </TextSection>
         <TextSection title="What I do">
           <p>
-            I specialize in building APIs, websites and cutting-edge web
-            applications using tools like <Highlight>modern PHP</Highlight> and{" "}
-            <Highlight>JavaScript</Highlight>{" "}
+            I specialize in building backend systems, websites and cutting-edge
+            web applications using tools like <Highlight>modern PHP</Highlight>{" "}
+            and <Highlight>JavaScript</Highlight>{" "}
             <span className="text-base text-gray-500 dark:text-gray-400">
               (preferably, with TypeScript)
             </span>
@@ -143,15 +142,15 @@ const IndexPage: React.FC<IndexPageProps> = () => {
           </p>
           <p>
             I have years of experience building fast, stable and maintainable
-            backend systems, usually based on <Highlight>PHP</Highlight> or{" "}
+            backends, usually based on <Highlight>PHP</Highlight> or{" "}
             <Highlight>Node.js</Highlight>, and exposing a{" "}
             <Highlight>REST</Highlight> or <Highlight>GraphQL</Highlight> API.
           </p>
           <p>
             When it comes to building websites and user interfaces, I'm heavily
             invested into <Highlight>React</Highlight> and the tools that build
-            on top of it (<Highlight>Gatsby</Highlight>,{" "}
-            <Highlight>Next.js</Highlight>, etc.), but I'm also open to working
+            on top of it (<Highlight>Next.js</Highlight>,{" "}
+            <Highlight>Gatsby</Highlight>, etc.), but I'm also open to working
             with other frameworks, like <Highlight>Vue.js</Highlight> or{" "}
             <Highlight>Angular</Highlight>.
           </p>
@@ -186,7 +185,7 @@ const IndexPage: React.FC<IndexPageProps> = () => {
               details={
                 <>
                   <span className="whitespace-nowrap">
-                    Software Developer &middot;
+                    Software Engineer &middot;
                   </span>{" "}
                   <span className="whitespace-nowrap">Full-time &middot;</span>{" "}
                   <span className="whitespace-nowrap">2017 &mdash; 2021</span>
@@ -287,48 +286,22 @@ const IndexPage: React.FC<IndexPageProps> = () => {
               </Tags>
             </CVItem>
             <CVItem
-              title="Sol Press"
-              companyUrl="https://solpress.co/"
+              title="Sol Press, LLC"
               details={
                 <>
                   <span className="whitespace-nowrap">
-                    Software Developer &middot;
+                    Software Engineer &middot;
                   </span>{" "}
-                  <span className="whitespace-nowrap">Freelance &middot;</span>{" "}
+                  <span className="whitespace-nowrap">Contract &middot;</span>{" "}
                   <span className="whitespace-nowrap">2017 &mdash; 2020</span>
                 </>
               }
             >
               <div className="text-gray-800 dark:text-gray-200">
                 I worked on various projects for Sol Press over the course of a
-                few years, largely being responsible for building their presence
-                on the Web from scratch.
-                <ul className="cv-item-bullets mt-3 flex flex-col gap-3">
-                  <li>
-                    Built and maintained the corporate website (
-                    <StandardLink href="https://solpress.co/">
-                      solpress.co
-                    </StandardLink>
-                    ). The website was initially written in PHP (with Laravel),
-                    and later rewritten as an API-based application with
-                    WordPress as a headless CMS and Laravel on the backend, and
-                    Vue.js (with Nuxt.js) on the frontend.
-                  </li>
-                  <li>
-                    Built several landing pages in a variety of technologies.
-                  </li>
-                  <li>
-                    Built an in-house CMS for landing page management, in PHP
-                    (with Laravel) and Vue.js.
-                  </li>
-                  <li>
-                    Set up and customized a Shopify store for{" "}
-                    <StandardLink href="https://shop.solpress.co/">
-                      shop.solpress.co
-                    </StandardLink>
-                    .
-                  </li>
-                </ul>
+                few years, doing everything from web development to server
+                administration, and largely being responsible for building their
+                presence on the Web from scratch.
               </div>
               <Tags>
                 <Tag>PHP</Tag>
@@ -338,6 +311,7 @@ const IndexPage: React.FC<IndexPageProps> = () => {
                 <Tag>Nuxt.js</Tag>
                 <Tag>WordPress</Tag>
                 <Tag>DevOps</Tag>
+                <Tag>Linux</Tag>
               </Tags>
             </CVItem>
             <CVItem
@@ -355,8 +329,7 @@ const IndexPage: React.FC<IndexPageProps> = () => {
               <div className="text-gray-800 dark:text-gray-200">
                 During my internship at Execom, I worked independently on
                 multiple Web-based projects for several weeks, using
-                technologies such as PHP (with the Symfony framework) and
-                AngularJS.
+                technologies like PHP and AngularJS.
               </div>
               <Tags>
                 <Tag>PHP</Tag>
