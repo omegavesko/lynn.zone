@@ -4,8 +4,8 @@ const plugins = [
   {
     resolve: `gatsby-plugin-manifest`,
     options: {
-      name: `Veselin Romić`,
-      short_name: `Veselin Romić`,
+      name: `Lynn Romich`,
+      short_name: `Lynn Romich`,
       start_url: `/`,
       icon: `src/images/icon.png`,
       background_color: `#ffffff`,
@@ -48,7 +48,7 @@ const plugins = [
   {
     resolve: `gatsby-plugin-canonical-urls`,
     options: {
-      siteUrl: `https://veselin.dev`,
+      siteUrl: `https://lynn.zone`,
       stripQueryString: true,
     },
   },
@@ -60,7 +60,7 @@ if (process.env.NODE_ENV === "production") {
 
 module.exports = {
   siteMetadata: {
-    title: `Veselin Romić`,
+    title: `Lynn Romich`,
     description: `Turning ☕ into 💾 since 19XX`,
     author: `@omegavesko`,
   },

@@ -21,9 +21,9 @@ export const onRouteUpdate = ({ location }) => {
     return null
   }
 
-  if (window.location.hostname !== "veselin.dev") {
+  if (window.location.hostname !== "lynn.zone") {
     console.log(
-      `Hostname (${window.location.hostname}) isn't veselin.dev, skipping pageview event.`
+      `Hostname (${window.location.hostname}) isn't lynn.zone, skipping pageview event.`
     )
     return null
   }

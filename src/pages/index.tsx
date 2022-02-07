@@ -96,11 +96,11 @@ const IndexPage: React.FC<IndexPageProps> = () => {
   return (
     <>
       <Helmet titleTemplate="%s">
-        <title>Veselin Romić</title>
+        <title>Lynn Romich</title>
         <meta name="description" content="Turning ☕ into 💾 since 19XX" />
       </Helmet>
       <h1 className="mb-2 text-6xl text-gray-800 font-medium leading-none dark:text-gray-200">
-        Veselin Romić
+        Lynn Romich
       </h1>
       <p className="mb-6 text-lg text-gray-800 dark:text-gray-200">
         Turning ☕ into 💾 since 19XX
@@ -112,7 +112,7 @@ const IndexPage: React.FC<IndexPageProps> = () => {
       <div className="mt-8 flex flex-col gap-8">
         <TextSection title="About me">
           <p>
-            👋 Hi! I'm Veselin, a <Highlight>software engineer</Highlight> with
+            👋 Hi! I'm Lynn, a <Highlight>software engineer</Highlight> with
             more than {new Date().getFullYear() - 2017} years of professional
             experience building and maintaining digital products, with a focus
             on the Web.

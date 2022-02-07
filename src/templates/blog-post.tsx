@@ -54,7 +54,7 @@ const BlogPostLayout: React.FC<BlogPostLayoutProps> = ({ data }) => {
           property="article:published_time"
           content={data.mdx.frontmatter.date}
         />
-        <meta property="article:author" content="https://veselin.dev" />
+        <meta property="article:author" content="https://lynn.zone" />
         <meta
           property="og:image"
           content={buildOgImageUrl(data.mdx.frontmatter.title)}

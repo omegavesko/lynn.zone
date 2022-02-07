@@ -73,17 +73,17 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
       <Helmet
-        titleTemplate="%s | veselin.dev"
+        titleTemplate="%s | lynn.zone"
         htmlAttributes={{
           lang: "en",
         }}
       >
-        <title>Veselin Romić</title>
+        <title>Lynn Romich</title>
         <meta name="description" content="Turning ☕ into 💾 since 19XX" />
 
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Veselin Romić" />
-        <meta property="og:site_name" content="veselin.dev" />
+        <meta property="og:title" content="Lynn Romich" />
+        <meta property="og:site_name" content="lynn.zone" />
 
         <meta name="twitter:creator" content="@omegavesko" />
       </Helmet>

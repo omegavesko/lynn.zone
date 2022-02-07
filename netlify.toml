@@ -4,5 +4,5 @@
 
 [[redirects]]
   from = "https://blog.veselin.dev/*"
-  to = "https://veselin.dev/blog/:splat"
+  to = "https://lynn.zone/blog/:splat"
   force = true
