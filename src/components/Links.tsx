@@ -15,17 +15,17 @@ export interface LinksProps {}
 const Links: React.FC<LinksProps> = () => {
   return (
     <ul className="flex flex-col gap-2 flex-wrap lg:flex-row lg:gap-x-5">
-      <a href="https://www.linkedin.com/in/veselinromic/">
-        <LinksItem icon={<SiLinkedin />} name={"veselinromic"} />
+      <a href="https://www.linkedin.com/in/lynnntropy/">
+        <LinksItem icon={<SiLinkedin />} name={"lynnntropy"} />
       </a>
-      <a href="https://github.com/omegavesko">
-        <LinksItem icon={<SiGithub />} name={"omegavesko"} />
+      <a href="https://github.com/lynnntropy">
+        <LinksItem icon={<SiGithub />} name={"lynnntropy"} />
       </a>
-      <a href="https://twitter.com/omegavesko">
-        <LinksItem icon={<SiTwitter />} name={"omegavesko"} />
+      <a href="https://twitter.com/lynnntropy">
+        <LinksItem icon={<SiTwitter />} name={"lynnntropy"} />
       </a>
-      <a href="mailto:hi@veselin.dev">
-        <LinksItem icon={<SiGmail />} name={"hi@veselin.dev"} />
+      <a href="mailto:lynn@lynn.zone">
+        <LinksItem icon={<SiGmail />} name={"lynn@lynn.zone"} />
       </a>
     </ul>
   )
