@@ -180,6 +180,40 @@ const IndexPage: React.FC<IndexPageProps> = () => {
               </div>
             </CVItem>
             <CVItem
+              title="DataCamp"
+              companyUrl="https://www.datacamp.com/"
+              details={
+                <>
+                  <span className="whitespace-nowrap">
+                    Software Engineer &middot;
+                  </span>{" "}
+                  <span className="whitespace-nowrap">Contract &middot;</span>{" "}
+                  <span className="whitespace-nowrap">
+                    Aug 2021 &mdash; Feb 2022
+                  </span>
+                </>
+              }
+            >
+              <div className="flex flex-col gap-3 text-gray-800 dark:text-gray-200">
+                <p>
+                  I worked with DataCamp in a contract position writing mainly
+                  frontend TypeScript code with React and Next.js, embedded in
+                  an existing team to help maintain and iterate on their
+                  public-facing web properties (i.e. everything on{" "}
+                  <StandardLink href="https://www.datacamp.com/">
+                    datacamp.com
+                  </StandardLink>
+                  ).
+                </p>
+                <p>
+                  This included communication with stakeholders, code reviews,
+                  managing the software development process using Jira and
+                  GitHub, as well as implementing designs built in Figma by the
+                  design team.
+                </p>
+              </div>
+            </CVItem>
+            <CVItem
               title="Infostud Group"
               companyUrl="https://www.infostud.com/?locale=en"
               details={
