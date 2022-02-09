@@ -212,6 +212,14 @@ const IndexPage: React.FC<IndexPageProps> = () => {
                   design team.
                 </p>
               </div>
+              <Tags>
+                <Tag>JavaScript</Tag>
+                <Tag>TypeScript</Tag>
+                <Tag>React</Tag>
+                <Tag>Next.js</Tag>
+                <Tag>Docker</Tag>
+                <Tag>GraphQL</Tag>
+              </Tags>
             </CVItem>
             <CVItem
               title="Infostud Group"
