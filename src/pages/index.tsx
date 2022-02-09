@@ -350,7 +350,7 @@ const IndexPage: React.FC<IndexPageProps> = () => {
             </CVItem>
             <CVItem
               title="Execom"
-              companyUrl="https://www.execom.eu/"
+              companyUrl="https://htecgroup.com/"
               details={
                 <>
                   <span className="whitespace-nowrap">Intern &middot;</span>{" "}
@@ -360,10 +360,19 @@ const IndexPage: React.FC<IndexPageProps> = () => {
                 </>
               }
             >
-              <div className="text-gray-800 dark:text-gray-200">
-                During my internship at Execom, I worked independently on
-                multiple Web-based projects for several weeks, using
-                technologies like PHP and AngularJS.
+              <div className="flex flex-col gap-3 text-gray-800 dark:text-gray-200">
+                <p>
+                  Execom was merged into{" "}
+                  <StandardLink href="https://htecgroup.com/">
+                    HTEC Group
+                  </StandardLink>{" "}
+                  after I worked there.
+                </p>
+                <p>
+                  During my internship at Execom, I worked independently on
+                  multiple Web-based projects for several weeks, using
+                  technologies like PHP and AngularJS.
+                </p>
               </div>
               <Tags>
                 <Tag>PHP</Tag>
