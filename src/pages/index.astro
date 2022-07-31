@@ -1,7 +1,15 @@
 ---
+import { compareDesc, parseISO } from 'date-fns'
+
 import Layout from "../layouts/Layout";
 import Links from "../components/Links";
 import Link from "../components/Link";
+
+const blogPosts = await Astro.glob('./blog/*.mdx')
+
+const recentBlogPosts = blogPosts
+  .sort((a, b) => compareDesc(parseISO(a.frontmatter.date), parseISO(b.frontmatter.date)))
+  .slice(0, 3);
 ---
 
 <Layout>
@@ -30,11 +38,12 @@ import Link from "../components/Link";
       </div>
       <div class="w-full mx-auto max-w-md text-start">
         <h2 class="mb-2 text-base font-medium">Recent blog posts</h2>
-        <ul class="flex flex-col gap-2 text-sm">
-          <li>E2E Testing an App with Clerk Authentication in Cypress</li>
-          <li>Simple, Privacy-Friendly, and Free Analytics Using Serverless Functions</li>
-          <li>PHP Debugging With Xdebug 3 Inside a Docker Container</li>
+        <ul class="mb-2 flex flex-col gap-2 text-sm">
+          {recentBlogPosts.map(post =>
+          <li><a href={post.url} class="hover:underline">{post.frontmatter.title}</a></li>
+          )}
         </ul>
+        <Link className="text-sm" href="/blog">All posts 🡒</Link>
       </div>
     </div>
   </div>
