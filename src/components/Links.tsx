@@ -14,16 +14,28 @@ const Links: React.FC = () => {
   return (
     <ul className="flex flex-col gap-2 flex-wrap lg:flex-row lg:gap-x-5">
       <a href="https://www.linkedin.com/in/lynnntropy/">
-        <LinksItem icon={<SiLinkedin />} name={"lynnntropy"} />
+        <LinksItem
+          icon={<SiLinkedin className="relative top-px" />}
+          name={"lynnntropy"}
+        />
       </a>
       <a href="https://github.com/lynnntropy">
-        <LinksItem icon={<SiGithub />} name={"lynnntropy"} />
+        <LinksItem
+          icon={<SiGithub className="relative top-px" />}
+          name={"lynnntropy"}
+        />
       </a>
       <a href="https://twitter.com/lynnntropy">
-        <LinksItem icon={<SiTwitter />} name={"lynnntropy"} />
+        <LinksItem
+          icon={<SiTwitter className="relative top-px" />}
+          name={"lynnntropy"}
+        />
       </a>
       <a href="mailto:lynn@lynn.zone">
-        <LinksItem icon={<SiGmail />} name={"lynn@lynn.zone"} />
+        <LinksItem
+          icon={<SiGmail className="relative top-px" />}
+          name={"lynn@lynn.zone"}
+        />
       </a>
     </ul>
   );
