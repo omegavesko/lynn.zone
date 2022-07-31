@@ -27,6 +27,21 @@ module.exports = {
       colors: {
         gray: colors.neutral,
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            code: {
+              fontWeight: 400,
+            },
+            "code::before": {
+              content: "none",
+            },
+            "code::after": {
+              content: "none",
+            },
+          },
+        },
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],

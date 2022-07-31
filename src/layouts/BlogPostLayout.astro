@@ -6,6 +6,7 @@ import { parseISO, differenceInYears, differenceInDays, format, formatDistanceTo
 import readingTime from 'reading-time';
 import ReadingTime from "../components/ReadingTime";
 import Layout from "./Layout";
+import Links from "../components/Links";
 
 const { content } = Astro.props;
 
@@ -38,8 +39,16 @@ const showRelativeTime = differenceInDays(new Date(), date) >= 1
       before using it, especially if the post contains code samples.
     </div>
     )}
-    <article class="prose prose-lg prose-neutral dark:prose-invert">
+    <article
+      class="mb-12 prose prose-lg prose-neutral prose-pre:!bg-gray-800 prose-pre:!text-base prose-pre:leading-normal dark:prose-invert">
       <slot />
     </article>
+    <div>
+      <p class="mb-4 text-gray-500 dark:text-gray-400">
+        Hey, thanks for reading all the way through! If you'd like to get in
+        touch or check out what else I've worked on, here's where you can find me on the usual places.
+      </p>
+      <Links />
+    </div>
   </div>
 </Layout>
