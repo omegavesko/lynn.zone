@@ -11,7 +11,7 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({ title, children }) => (
-  <html lang="en" className="h-full">
+  <html lang="en" className="min-h-full">
     <head>
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width" />
@@ -28,9 +28,15 @@ const Layout: React.FC<LayoutProps> = ({ title, children }) => (
 
       <meta name="twitter:creator" content="@lynnntropy" />
     </head>
-    <body className="h-full bg-black text-gray-800 font-sans dark:text-gray-200">
-      <div className="h-full max-w-3xl mx-auto px-8 pt-8 pb-28 2xl:pt-12">
-        {children}
+    <body className="min-h-full bg-black text-gray-800 font-sans dark:text-gray-200">
+      <div className="min-h-screen flex flex-col pt-6">
+        <main className="flex-1 flex flex-col">{children}</main>
+        <footer className="text-center py-6 text-white/40">
+          <p className="mb-2">Made with ❤ on Earth.</p>
+          <p className="text-sm text-white/30">
+            This site doesn't use tracking cookies.
+          </p>
+        </footer>
       </div>
     </body>
   </html>

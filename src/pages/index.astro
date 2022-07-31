@@ -5,34 +5,37 @@ import Link from "../components/Link";
 ---
 
 <Layout>
-  <div class="min-h-full flex flex-col items-center justify-center text-center">
-    <h1 class="mb-6 text-6xl text-gray-800 font-medium leading-none dark:text-gray-200">
-      Lynn Romich
-    </h1>
-    <div class="mb-6">
-      <Links />
-    </div>
-    <div class="mb-12 mx-auto max-w-md flex flex-col gap-4">
-      <p>👋 Hi! I'm Lynn.</p>
-      <p>
-        I'm a freelance software engineer, looking to work with ethical, human-friendly, forward-thinking companies. If
-        that's you,
-        please get in touch! You can see my resume
-        <Link href="/resume">here</Link>.
-      </p>
-      <p>
-        I also build my own products! Right now I'm working on
-        <Link href="https://usekonbini.com" target="_blank">Konbini</Link>,
-        a universal ecommerce API platform.
-      </p>
-    </div>
-    <div class="w-full mx-auto max-w-md text-start">
-      <h2 class="mb-2 text-base font-medium">Recent blog posts</h2>
-      <ul class="flex flex-col gap-2 text-sm">
-        <li>E2E Testing an App with Clerk Authentication in Cypress</li>
-        <li>Simple, Privacy-Friendly, and Free Analytics Using Serverless Functions</li>
-        <li>PHP Debugging With Xdebug 3 Inside a Docker Container</li>
-      </ul>
+  <div class="flex-1 flex items-center justify-center">
+    <div class="flex flex-col items-center justify-center text-center">
+      <h1 class="mb-6 text-6xl text-gray-800 font-medium leading-none dark:text-gray-200">
+        Lynn Romich
+      </h1>
+      <div class="mb-6">
+        <Links />
+      </div>
+      <div class="mb-12 mx-auto max-w-md flex flex-col gap-4">
+        <p>👋 Hi! I'm Lynn.</p>
+        <p>
+          I'm a freelance software engineer, looking to work with ethical, human-friendly, forward-thinking companies.
+          If
+          that's you,
+          please get in touch! You can see my resume
+          <Link href="/resume">here</Link>.
+        </p>
+        <p>
+          I also build my own products! Right now I'm working on
+          <Link href="https://usekonbini.com" target="_blank">Konbini</Link>,
+          a universal ecommerce API platform.
+        </p>
+      </div>
+      <div class="w-full mx-auto max-w-md text-start">
+        <h2 class="mb-2 text-base font-medium">Recent blog posts</h2>
+        <ul class="flex flex-col gap-2 text-sm">
+          <li>E2E Testing an App with Clerk Authentication in Cypress</li>
+          <li>Simple, Privacy-Friendly, and Free Analytics Using Serverless Functions</li>
+          <li>PHP Debugging With Xdebug 3 Inside a Docker Container</li>
+        </ul>
+      </div>
     </div>
   </div>
 </Layout>
