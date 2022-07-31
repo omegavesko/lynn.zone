@@ -23,7 +23,7 @@ const Layout: React.FC<LayoutProps> = ({ title, children }) => (
 
       <meta name="twitter:creator" content="@lynnntropy" />
     </head>
-    <body className="h-full bg-gray-900 text-gray-800 dark:text-gray-200">
+    <body className="h-full bg-black text-gray-800 dark:text-gray-200">
       <div className="h-full max-w-3xl mx-auto px-8 pt-8 pb-28 2xl:pt-12">
         {children}
       </div>
