@@ -16,7 +16,7 @@ const showRelativeTime = differenceInDays(new Date(), date) >= 1
 
 <Layout title={content.title}>
   <div class="mx-auto max-w-2xl">
-    <div class="mb-12">
+    <div class="mb-8">
       <h1 class="mb-3 text-4xl font-medium">{content.title}</h1>
       <time datetime={content.date}>
         {format(date, "MMMM do, yyyy")}
@@ -29,6 +29,14 @@ const showRelativeTime = differenceInDays(new Date(), date) >= 1
       <span class="ml-1 mr-0.5 text-gray-500 dark:text-gray-400">&middot;</span>
       <ReadingTime minutes={readingTime(content.astro.source).minutes} />
     </div>
+    {showDateWarning && (
+    <div class="mb-8 py-3 px-4 rounded-xl bg-red-100 text-red-900 dark:bg-red-900 dark:text-white">
+      Be careful! This post is{" "}
+      <strong class="font-medium">over two years old</strong>. Tech
+      can change really fast, so make sure the advice here is still valid
+      before using it, especially if the post contains code samples.
+    </div>
+    )}
     <article class="prose prose-lg prose-neutral dark:prose-invert">
       <slot />
     </article>
