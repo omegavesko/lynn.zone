@@ -28,7 +28,7 @@ const Layout: React.FC<LayoutProps> = ({ title, children }) => (
 
       <meta name="twitter:creator" content="@lynnntropy" />
     </head>
-    <body className="min-h-full bg-black text-gray-800 font-sans dark:text-gray-200">
+    <body className="min-h-full px-6 bg-black text-gray-800 font-sans sm:px-0 dark:text-gray-200">
       <div className="min-h-screen flex flex-col pt-6">
         <main className="flex-1 flex flex-col">{children}</main>
         <footer className="text-center py-6 text-white/40">
