@@ -3,7 +3,7 @@ import { compareDesc, parseISO, format } from 'date-fns'
 import Layout from '../layouts/Layout';
 
 
-const blogPosts = (await Astro.glob('./blog/*.mdx')).sort((a, b) => compareDesc(parseISO(a.frontmatter.date), parseISO(b.frontmatter.date)))
+const blogPosts = (await Astro.glob('./blog/*.md')).sort((a, b) => compareDesc(parseISO(a.frontmatter.date), parseISO(b.frontmatter.date)))
 ---
 
 <Layout>

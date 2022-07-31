@@ -53,7 +53,7 @@ If you're using Docker Desktop, having `host.docker.internal` set as a fallback 
 
 If you're using Docker (and if you're not, I highly recommend thinking about it!), the below is an example of what I do to install and enable Xdebug in development without carrying it over to the production image, using [multi-stage builds](https://docs.docker.com/develop/develop-images/multistage-build/):
 
-```dockerfile
+```docker
 # (or your base image)
 FROM php:8.0-fpm-alpine as base
 

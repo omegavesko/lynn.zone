@@ -1,12 +1,36 @@
 ---
+import "@fontsource/fira-code/400.css";
+
+import { parseISO, differenceInYears, differenceInDays, format, formatDistanceToNow } from "date-fns"
+import readingTime from 'reading-time';
+import ReadingTime from "../components/ReadingTime";
 import Layout from "./Layout";
 
 const { content } = Astro.props;
+
+const date = parseISO(content.date)
+const showDateWarning = differenceInYears(new Date(), date) >= 2
+const showRelativeTime = differenceInDays(new Date(), date) >= 1
+
 ---
 
 <Layout title={content.title}>
-  <h1>{content.title}</h1>
-  <article class="prose prose-neutral dark:prose-invert">
-    <slot />
-  </article>
+  <div class="mx-auto max-w-2xl">
+    <div class="mb-12">
+      <h1 class="mb-3 text-4xl font-medium">{content.title}</h1>
+      <time datetime={content.date}>
+        {format(date, "MMMM do, yyyy")}
+        {showRelativeTime && (
+        <span class="text-gray-500 dark:text-gray-400">
+          ({formatDistanceToNow(date, { addSuffix: true })})
+        </span>
+        )}
+      </time>
+      <span class="ml-1 mr-0.5 text-gray-500 dark:text-gray-400">&middot;</span>
+      <ReadingTime minutes={readingTime(content.astro.source).minutes} />
+    </div>
+    <article class="prose prose-lg prose-neutral dark:prose-invert">
+      <slot />
+    </article>
+  </div>
 </Layout>

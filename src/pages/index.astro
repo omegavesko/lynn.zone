@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout";
 import Links from "../components/Links";
 import Link from "../components/Link";
 
-const blogPosts = await Astro.glob('./blog/*.mdx')
+const blogPosts = await Astro.glob('./blog/*.md')
 
 const recentBlogPosts = blogPosts
   .sort((a, b) => compareDesc(parseISO(a.frontmatter.date), parseISO(b.frontmatter.date)))
