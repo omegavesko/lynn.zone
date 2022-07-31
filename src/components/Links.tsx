@@ -10,9 +10,7 @@ const LinksItem: React.FC<{
   </li>
 );
 
-export interface LinksProps {}
-
-const Links: React.FC<LinksProps> = () => {
+const Links: React.FC = () => {
   return (
     <ul className="flex flex-col gap-2 flex-wrap lg:flex-row lg:gap-x-5">
       <a href="https://www.linkedin.com/in/lynnntropy/">
