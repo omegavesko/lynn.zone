@@ -1,11 +1,11 @@
 import { defineConfig } from "astro/config";
-import react from "@astrojs/react";
+import preact from "@astrojs/preact";
 import tailwind from "@astrojs/tailwind";
 import * as fs from "fs";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), tailwind()],
+  integrations: [preact({ compat: true }), tailwind()],
   markdown: {
     shikiConfig: {
       theme: JSON.parse(
