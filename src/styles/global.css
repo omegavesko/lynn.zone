@@ -7,7 +7,7 @@
 }
 
 .prose hr {
-  @apply my-6 border-t border-gray-300 dark:border-gray-700;
+  @apply w-64 mx-auto my-6 border-t border-gray-300 dark:border-gray-700;
 }
 
 .prose p code,
