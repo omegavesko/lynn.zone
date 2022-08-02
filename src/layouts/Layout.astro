@@ -1,0 +1,53 @@
+---
+import "../styles/global.css";
+
+import "@fontsource/barlow/400.css";
+import "@fontsource/barlow/400-italic.css";
+import "@fontsource/barlow/500.css";
+import "@fontsource/barlow/600.css";
+import "@fontsource/barlow/700.css";
+
+import Nav from "../components/Nav"
+
+export interface Props {
+  title?: string
+}
+
+const { title } = Astro.props as Props
+---
+
+<html lang="en" class="min-h-full">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+  <title>{title ? `${title} | lynn.zone` : `Lynn Romich`}</title>
+
+  <meta name="description" content="Turning ☕ into 💾 since 19XX" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Lynn Romich" />
+  <meta property="og:site_name" content="lynn.zone" />
+
+  <meta name="twitter:creator" content="@lynnntropy" />
+</head>
+
+<body class="min-h-full px-6 bg-gray-900 text-gray-800 font-sans lg:px-0 dark:text-gray-200">
+  <div class="min-h-screen flex flex-col pt-6">
+    <Nav client:load />
+    <main class="flex-1 mb-32 w-full max-w-3xl self-center flex flex-col 2xl:mt-24">
+      <slot />
+    </main>
+    <footer class="text-center py-6 text-white/40">
+      <p class="mb-2">Made with ❤ on Earth.</p>
+      <p class="text-sm text-white/30">
+        This site doesn't use tracking cookies.
+      </p>
+    </footer>
+  </div>
+</body>
+
+</html>

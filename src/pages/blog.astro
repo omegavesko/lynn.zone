@@ -1,6 +1,6 @@
 ---
 import { compareDesc, parseISO, format } from 'date-fns'
-import Layout from '../layouts/Layout';
+import Layout from '../layouts/Layout.astro';
 
 
 const blogPosts = (await Astro.glob('./blog/*.md')).sort((a, b) => compareDesc(parseISO(a.frontmatter.date), parseISO(b.frontmatter.date)))
