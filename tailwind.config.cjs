@@ -25,7 +25,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        gray: colors.neutral,
+        gray: colors.zinc,
       },
       typography: {
         DEFAULT: {
