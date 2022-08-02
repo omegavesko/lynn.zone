@@ -32,7 +32,7 @@ const Layout: React.FC<LayoutProps> = ({ title, children }) => (
       <meta name="twitter:creator" content="@lynnntropy" />
     </head>
     <body className="min-h-full px-6 bg-gray-900 text-gray-800 font-sans sm:px-0 dark:text-gray-200">
-      <div className="min-h-screen flex flex-col gap-12 pt-6">
+      <div className="min-h-screen flex flex-col gap-32 pt-6">
         <main className="flex-1 w-full max-w-3xl self-center flex flex-col">
           {children}
         </main>
