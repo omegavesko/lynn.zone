@@ -8,6 +8,17 @@ import "@fontsource/barlow/700.css";
 
 import * as React from "react";
 
+const NavLink: React.FC<
+  React.DetailedHTMLProps<
+    React.AnchorHTMLAttributes<HTMLAnchorElement>,
+    HTMLAnchorElement
+  >
+> = ({ children, ...props }) => (
+  <a {...props} className="hover:underline">
+    {children}
+  </a>
+);
+
 interface LayoutProps {
   title?: string;
   children: React.ReactNode;
@@ -31,9 +42,26 @@ const Layout: React.FC<LayoutProps> = ({ title, children }) => (
 
       <meta name="twitter:creator" content="@lynnntropy" />
     </head>
-    <body className="min-h-full px-6 bg-gray-900 text-gray-800 font-sans sm:px-0 dark:text-gray-200">
-      <div className="min-h-screen flex flex-col gap-32 pt-6">
-        <main className="flex-1 w-full max-w-3xl self-center flex flex-col">
+    <body className="min-h-full px-6 bg-gray-900 text-gray-800 font-sans lg:px-0 dark:text-gray-200">
+      <div className="min-h-screen flex flex-col pt-6">
+        <nav className="mb-24 w-full max-w-3xl self-center flex items-center gap-8 2xl:fixed 2xl:left-8 2xl:flex-col 2xl:items-stretch 2xl:w-48">
+          <a href="/">
+            <img
+              alt="Go to homepage"
+              src="/images/avatar.png"
+              className="w-12 rounded-full 2xl:h-16 2xl:w-16 2xl:mx-0 2xl:mb-4"
+            />
+          </a>
+          <ul className="flex gap-4 text-lg 2xl:flex-col 2xl:text-xl">
+            <li>
+              <NavLink href="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink href="/blog">Blog</NavLink>
+            </li>
+          </ul>
+        </nav>
+        <main className="flex-1 mb-32 w-full max-w-3xl self-center flex flex-col 2xl:mt-24">
           {children}
         </main>
         <footer className="text-center py-6 text-white/40">
