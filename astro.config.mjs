@@ -11,7 +11,6 @@ export default defineConfig({
       theme: JSON.parse(
         fs.readFileSync("./src/blog/Tomorrow_Night.tmTheme.json", "utf-8")
       ),
-      wrap: true,
     },
   },
 });
