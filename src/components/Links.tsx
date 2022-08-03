@@ -10,14 +10,14 @@ const LinksItem: React.FC<{
   icon: React.ReactNode;
   name: React.ReactNode;
 }> = ({ icon, name }) => (
-  <li className="flex items-center gap-3 text-lg text-gray-800 font-normal transition dark:text-gray-200 hover:text-gray-500 dark:hover:text-gray-300 lg:gap-2 lg:text-base">
+  <li className="flex items-center gap-3 text-base text-gray-800 font-normal transition dark:text-gray-200 hover:text-gray-500 dark:hover:text-gray-300">
     {icon} {name}
   </li>
 );
 
 const Links: React.FC = () => {
   return (
-    <ul className="flex flex-col gap-2 flex-wrap lg:flex-row lg:gap-x-5">
+    <ul className="flex flex-col gap-2 flex-wrap sm:flex-row sm:gap-x-5">
       <a href="https://www.linkedin.com/in/lynnntropy/">
         <LinksItem
           icon={<SiLinkedin className="relative top-px" />}
