@@ -2,3 +2,8 @@
   from = "https://blog.veselin.dev/*"
   to = "https://lynn.zone/blog/:splat"
   force = true
+
+[[redirects]]
+  from = "https://veselin.dev/*"
+  to = "https://lynn.zone/"
+  force = true
