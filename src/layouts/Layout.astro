@@ -11,10 +11,15 @@ import Nav from "../components/Nav"
 
 export interface Props {
   title?: string
-  style?: "default" | "blog-post"
+  style?: "default" | "blog-post",
+  socialImage?: {
+    url: string;
+    width: number;
+    height: number;
+  }
 }
 
-const { title, style = "default" } = Astro.props as Props
+const { title, style = "default", socialImage } = Astro.props as Props
 ---
 
 <html lang="en" class="min-h-full">
@@ -34,6 +39,18 @@ const { title, style = "default" } = Astro.props as Props
   <meta property="og:site_name" content="lynn.zone" />
 
   <meta name="twitter:creator" content="@lynnntropy" />
+
+  {socialImage &&
+  <meta property="og:image" content={socialImage.url} />}
+  {socialImage &&
+  <meta property="og:image:width" content={socialImage.width.toString(10)} />}
+  {socialImage &&
+  <meta property="og:image:height" content={socialImage.height.toString(10)} /> }
+
+  {socialImage &&
+  <meta name="twitter:card" content="summary_large_image">}
+  {socialImage &&
+  <meta name="twitter:image" content={socialImage.url}>}
 
   <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">

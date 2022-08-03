@@ -7,6 +7,7 @@ import readingTime from 'reading-time';
 import ReadingTime from "../components/ReadingTime";
 import Layout from "./Layout.astro";
 import Links from "../components/Links";
+import { getSocialImageForBlogPost } from "src/utils/blog";
 
 const { content } = Astro.props;
 
@@ -16,7 +17,8 @@ const showRelativeTime = differenceInDays(new Date(), date) >= 1
 
 ---
 
-<Layout style="blog-post" title={content.title}>
+<Layout style="blog-post" title={content.title} socialImage={{ url: getSocialImageForBlogPost(content.title), width:
+  2048, height: 1170 }}>
   <div class="mx-auto max-w-full sm:max-w-lg md:max-w-2xl">
     <div class="mb-8">
       <h1 class="mb-3 font-medium text-2xl sm:text-4xl">{content.title}</h1>
