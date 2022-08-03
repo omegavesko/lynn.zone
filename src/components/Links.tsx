@@ -1,5 +1,10 @@
 import * as React from "react";
-import { SiGithub, SiGmail, SiLinkedin, SiTwitter } from "react-icons/si";
+import {
+  SiGithub,
+  SiGmail,
+  SiLinkedin,
+  SiTwitter,
+} from "react-icons/si/index.js";
 
 const LinksItem: React.FC<{
   icon: React.ReactNode;
