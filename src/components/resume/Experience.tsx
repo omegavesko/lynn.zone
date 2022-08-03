@@ -59,9 +59,8 @@ const Resume: React.FC = () => (
         active={true}
       >
         <div>
-          I'm currently taking on freelance work.{" "}
-          <Link href="#contact">Get in touch</Link> if you have a project for
-          me!
+          I'm currently taking on freelance work. Get in touch if you have a
+          project for me!
         </div>
       </CVItem>
       <CVItem
@@ -79,11 +78,11 @@ const Resume: React.FC = () => (
       >
         <div className="flex flex-col gap-3">
           <p>
-            I worked with DataCamp in a contract position writing mainly
-            frontend TypeScript code with React and Next.js, embedded in an
-            existing team to help maintain and iterate on their public-facing
-            web properties (i.e. everything on{" "}
-            <Link href="https://www.datacamp.com/">datacamp.com</Link>
+            I worked with DataCamp for about six months on a contract basis,
+            writing mostly frontend code with TypeScript, React and Next.js.
+            During this time, I worked with their existing team to help maintain
+            and iterate on their public-facing web properties (i.e. everything
+            on <Link href="https://www.datacamp.com/">datacamp.com</Link>
             ).
           </p>
           <p>
@@ -117,7 +116,7 @@ const Resume: React.FC = () => (
         <div className="flex flex-col gap-3">
           <p>
             At Infostud, I participated in the development of greenfield
-            projects across the entire stack (frontend, backend, DevOps), as
+            projects across the entire stack (frontend, backend, and DevOps), as
             well as being responsible for maintenance of legacy code, as part of
             the team behind Poslovi Infostud and HR Lab &mdash; the leading
             platforms for job seekers and employers in Serbia.
@@ -134,20 +133,20 @@ const Resume: React.FC = () => (
                 HR Lab Assistant
               </Link>
               ) using modern tech like PHP 7+, React, GraphQL, Docker, and
-              Kubernetes. HR Lab Assistant is now the most widely-used ATS
-              software in Serbia.
+              Kubernetes. As of 2021, HR Lab Assistant was the most widely-used
+              ATS software in Serbia.
             </li>
             <li>
               Built an internal payment platform that integrated with PayPal and
-              NestPay (a proprietary payment processor) to enable HR Lab
-              products to easily integrate credit card payments, as well as
-              other payment methods. On average, tens of thousands of dollars
-              worth of payments passed through this service every month.
+              NestPay (a proprietary payment gateway popular in the region) to
+              enable HR Lab products to easily integrate credit card payments,
+              as well as other payment methods. On average, tens of thousands of
+              dollars worth of payments passed through this service every month.
             </li>
             <li>
               Maintained{" "}
               <Link href="https://poslovi.infostud.com/">
-                Poslovi.infostud.com
+                poslovi.infostud.com
               </Link>
               , the leading job board in Serbia, with over 1 million monthly
               unique users.
@@ -156,21 +155,18 @@ const Resume: React.FC = () => (
               Built the (as of 2021) current iteration of{" "}
               <Link href="https://www.hrlab.rs/en/">HRLab.rs</Link>, the website
               for the HR Lab brand, in collaboration with a designer, using
-              React and Gatsby. Improved site performance by 300% compared to
-              the previous iteration of the site. I later migrated this site
-              from Gatsby to Next.js, with no need for downtime or a feature
-              freeze.
+              React and Gatsby, and improving site performance by 300% in the
+              process. I later migrated this site from Gatsby to Next.js, with
+              no need for downtime or a feature freeze.
             </li>
             <li>
               Implemented CI/CD pipelines for the team's codebases using GitLab
               CI/CD, Docker, Kubernetes, and Helm.
             </li>
             <li>
-              Built{" "}
-              <Link href="https://accounts.hrlab.rs">accounts.hrlab.rs</Link>,
-              an OAuth 2-based identity server for the HR Lab platform. This
-              enabled HR Lab products to easily authenticate users through a
-              central location.
+              Built an OAuth 2-based identity server for the HR Lab platform.
+              This enabled HR Lab products to easily authenticate users through
+              a central location.
             </li>
             <li>
               Built an OAuth 2-based frontend for the company's internal LDAP
