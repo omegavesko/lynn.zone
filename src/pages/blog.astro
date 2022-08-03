@@ -12,7 +12,9 @@ const blogPosts = (await Astro.glob('./blog/*.md')).sort((a, b) => compareDesc(p
         {blogPosts.map(post =>
         <li class="flex flex-col md:flex-row md:justify-between md:gap-6">
             <a href={post.url} class="hover:underline">{post.frontmatter.title}</a>
-            <span class="text-white/30 md:text-end">{format(parseISO(post.frontmatter.date), 'MMM do, yyyy')}</span>
+            <span class="text-gray-400 md:text-end dark:text-gray-500">
+                {format(parseISO(post.frontmatter.date), 'MMM do, yyyy')}
+            </span>
         </li>
         )}
     </ul>

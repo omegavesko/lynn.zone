@@ -1,5 +1,9 @@
 ::selection {
-  @apply bg-white text-black;
+  @apply bg-gray-800 text-white dark:bg-gray-100 dark:text-black;
+}
+
+pre ::selection {
+  @apply bg-gray-100 text-black;
 }
 
 .shiki .language-id {
