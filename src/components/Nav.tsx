@@ -1,4 +1,5 @@
 import * as React from "react";
+import { classes } from "src/utils/styles";
 
 const NavLink: React.FC<
   React.DetailedHTMLProps<
@@ -11,7 +12,11 @@ const NavLink: React.FC<
   </a>
 );
 
-const Nav: React.FC = () => {
+interface NavProps {
+  style?: "default" | "blog-post";
+}
+
+const Nav: React.FC<NavProps> = ({ style = "default" }) => {
   const avatarRef = React.useRef<HTMLImageElement | null>(null);
 
   React.useEffect(() => {
@@ -35,7 +40,13 @@ const Nav: React.FC = () => {
   }, []);
 
   return (
-    <nav className="mb-24 w-full max-w-3xl self-center flex items-center gap-8 2xl:fixed 2xl:left-8 2xl:flex-col 2xl:items-stretch 2xl:w-48">
+    <nav
+      className={classes(
+        "mb-24 w-full self-center flex items-center gap-8 2xl:fixed 2xl:left-8 2xl:flex-col 2xl:items-stretch 2xl:w-48",
+        style === "default" && "max-w-3xl",
+        style === "blog-post" && "max-w-2xl"
+      )}
+    >
       <a href="/">
         <img
           ref={avatarRef}

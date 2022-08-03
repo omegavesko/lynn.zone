@@ -11,9 +11,10 @@ import Nav from "../components/Nav"
 
 export interface Props {
   title?: string
+  style?: "default" | "blog-post"
 }
 
-const { title } = Astro.props as Props
+const { title, style = "default" } = Astro.props as Props
 ---
 
 <html lang="en" class="min-h-full">
@@ -37,7 +38,7 @@ const { title } = Astro.props as Props
 
 <body class="min-h-full px-6 bg-gray-900 text-gray-800 font-sans lg:px-0 dark:text-gray-200">
   <div class="min-h-screen flex flex-col pt-6">
-    <Nav client:load />
+    <Nav style={style} client:load />
     <main class="flex-1 mb-32 w-full max-w-3xl self-center flex flex-col 2xl:mt-24">
       <slot />
     </main>
