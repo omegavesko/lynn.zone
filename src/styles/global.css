@@ -17,3 +17,25 @@
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
+
+ul.cv-item-bullets {
+  @apply pl-4 list-disc;
+}
+
+span.highlight {
+  @apply font-medium;
+
+  background: linear-gradient(135deg, #4338ca, #2563eb);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+  span.highlight {
+    @apply font-medium;
+
+    background: linear-gradient(135deg, #fdba74, #fde047);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

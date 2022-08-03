@@ -1,0 +1,36 @@
+---
+import Layout from "src/layouts/Layout.astro"
+import Experience from "src/components/resume/Experience"
+import Links from "../components/Links";
+import Highlight from "../components/Highlight";
+---
+
+<Layout title="Resume">
+  <h1 class="mb-4 text-6xl text-gray-800 font-medium leading-none dark:text-gray-200">
+    Lynn Romich
+  </h1>
+  <div class="mb-10">
+    <Links />
+  </div>
+  <div class="mb-10 flex flex-col gap-4 md:leading-8 md:text-xl">
+    <p>👋 Hi! I'm Lynn.</p>
+    <p>
+      I'm a <Highlight>full-stack software engineer</Highlight> with more than {new Date().getFullYear() - 2017} years
+      of professional experience building and maintaining digital products and services, with a focus on the Web.
+    </p>
+    <p>
+      I specialize in building APIs, websites, and web applications using modern tools. Tech I have extensive experience
+      in, and enjoy working with, includes <Highlight>PHP</Highlight>, <Highlight>TypeScript</Highlight>,
+      <Highlight>React</Highlight>, <Highlight>Next.js</Highlight>, and <Highlight>Tailwind CSS</Highlight>, but I'm
+      also always open to learning new things.
+    </p>
+    <p>
+      I'm mainly looking to work with ethical, human-friendly, forward-thinking companies that employ diverse,
+      autonomous teams, and don't shy away from investing in good engineering. If that's you,
+      you're in the right place!
+    </p>
+  </div>
+
+  <h2 class="mb-6 text-4xl text-gray-800 font-medium leading-none dark:text-gray-200">Experience</h2>
+  <Experience />
+</Layout>
