@@ -33,7 +33,7 @@ const { title, style = "default", socialImage } = Astro.props as Props
   <title>{title ? `${title} | lynn.zone` : `Lynn Romich`}</title>
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Lynn Romich" />
+  <meta property="og:title" content={title ? `${title} | lynn.zone` : `Lynn Romich`} />
   <meta property="og:site_name" content="lynn.zone" />
 
   <meta name="twitter:creator" content="@lynnntropy" />
