@@ -43,3 +43,7 @@ span.highlight {
     -webkit-text-fill-color: transparent;
   }
 }
+
+pre {
+  font-variant-ligatures: none;
+}
