@@ -1,0 +1,39 @@
+---
+title: '"Opting Out" of Tracing Headers on Google Cloud Platform'
+date: 2022-08-09
+
+layout: ../../layouts/BlogPostLayout.astro
+---
+
+If you’re using [Google Cloud Run](https://cloud.google.com/run) (and, from what I understand, this also applies to [Google Cloud Functions](https://cloud.google.com/functions) and [Google App Engine standard](https://cloud.google.com/appengine)), Google [will automatically create a trace](https://cloud.google.com/run/docs/trace) in [Cloud Trace](https://cloud.google.com/trace) for each incoming request, and inject the trace context into the request via the [standard](https://www.w3.org/TR/trace-context/) `traceparent` HTTP header.
+
+This is a cool feature… if you _want_ to use Cloud Trace. If you want to send telemetry to a different vendor, though, like [Honeycomb](https://www.honeycomb.io/), this is going to be a problem, because if your app is set up to pick up the trace context from the incoming request’s headers, your telemetry will contain references to "missing" root spans that only exist in Cloud Trace.
+
+In Honeycomb, that'll look something like this, and will prevent a lot of queries from working properly:
+
+![A screenshot of Honeycomb, showing a trace with a missing root span, and the following warning: "The root span of this trace is missing. There may be other spans missing, and the waterfall might render incorrectly. Expand the time range of the query and try again?"](/blog/opting-out-of-tracing-on-gcp/images/missing-root-span.png)
+
+In my Node.js services, instrumented using [OpenTelemetry](https://opentelemetry.io/) and its included Node.js auto-instrumentations, I "fixed" this issue by using the hooks provided by the HTTP instrumentation to discard any headers Cloud Tracing might be setting before the incoming request gets processed into a span. You can do this by replacing your call to `getNodeAutoInstrumentations()` with this code:
+
+```ts
+getNodeAutoInstrumentations({
+  '@opentelemetry/instrumentation-http': {
+    startIncomingSpanHook: (req) => {
+      delete req.headers.traceparent;
+      delete req.headers[`x-cloud-trace-context`];
+      delete req.headers[`grpc-trace-bin`];
+
+      return {};
+    },
+  },
+}),
+```
+
+(If you're setting up `@opentelemetry/instrumentation-http` separately, you can pass the same config object to the `HttpInstrumentation` constructor.)
+
+This is, unfortunately, clearly a hack, but also the least painful way I could find of getting around this issue. Other potential solutions I considered were:
+
+- **Disable Cloud Trace** -- You can't outright disable Cloud Trace for a project without also disabling a bunch of other services that depend on it, and I’m not sure if doing that would even actually prevent this behavior.
+- **Use a reverse proxy to strip the headers** -- On Cloud Run, you could theoretically solve this by adding some kind of reverse proxy to your container, and configuring it to strip these headers before they make it to your app. This would (in my opinion, anyway) be a massively overengineered solution, though, and also negatively impact your app's startup time, which is especially important in a serverless context.
+
+Please let me know if you've also run into this and figured out a better way of getting around it!
