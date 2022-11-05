@@ -2,8 +2,14 @@
 import "@fontsource/fira-code/400.css";
 import "@fontsource/fira-code/600.css";
 
-import { parseISO, differenceInYears, differenceInDays, format, formatDistanceToNow } from "date-fns"
-import readingTime from 'reading-time';
+import {
+  parseISO,
+  differenceInYears,
+  differenceInDays,
+  format,
+  formatDistanceToNow,
+} from "date-fns";
+import readingTime from "reading-time";
 import ReadingTime from "../components/ReadingTime";
 import Layout from "./Layout.astro";
 import Links from "../components/Links";
@@ -11,44 +17,59 @@ import { getSocialImageForBlogPost } from "src/utils/blog";
 
 const { content } = Astro.props;
 
-const date = parseISO(content.date)
-const showDateWarning = differenceInYears(new Date(), date) >= 2
-const showRelativeTime = differenceInDays(new Date(), date) >= 1
-
+const date = parseISO(content.date);
+const showDateWarning = differenceInYears(new Date(), date) >= 2;
+const showRelativeTime = differenceInDays(new Date(), date) >= 1;
 ---
 
-<Layout style="blog-post" title={content.title} socialImage={{ url: getSocialImageForBlogPost(content.title), width:
-  2048, height: 1170 }}>
+<Layout
+  style="blog-post"
+  title={content.title}
+  socialImage={{
+    url: getSocialImageForBlogPost(content.title),
+    width: 2048,
+    height: 1170,
+  }}
+>
   <div class="mx-auto max-w-full sm:max-w-lg md:max-w-2xl">
     <div class="mb-8">
       <h1 class="mb-3 font-medium text-2xl sm:text-4xl">{content.title}</h1>
       <time datetime={content.date} class="mb-1 block sm:mb-0 sm:inline">
         {format(date, "MMMM do, yyyy")}
-        {showRelativeTime && (
-        <span class="text-gray-500 dark:text-gray-400">
-          ({formatDistanceToNow(date, { addSuffix: true })})
-        </span>
-        )}
+        {
+          showRelativeTime && (
+            <span class="text-gray-500 dark:text-gray-400">
+              ({formatDistanceToNow(date, { addSuffix: true })})
+            </span>
+          )
+        }
       </time>
-      <span class="hidden ml-1 mr-0.5 text-gray-500 sm:inline dark:text-gray-400">&middot;</span>
+      <span
+        class="hidden ml-1 mr-0.5 text-gray-500 sm:inline dark:text-gray-400"
+        >&middot;</span
+      >
       <ReadingTime minutes={readingTime(content.astro.source).minutes} />
     </div>
-    {showDateWarning && (
-    <div
-      class="mb-8 py-3 px-4 rounded-md bg-red-100 text-red-900 dark:bg-transparent dark:border-2 dark:border-red-900 dark:text-white">
-      Watch out! This post is{" "}
-      <strong class="font-medium">over two years old</strong>. Tech moves quickly, so make sure the stuff in this post
-      is still valid before relying on it, especially if you're looking at code samples.
-    </div>
-    )}
+    {
+      showDateWarning && (
+        <div class="mb-8 py-3 px-4 rounded-md bg-red-100 text-red-900 dark:bg-transparent dark:border-2 dark:border-red-900 dark:text-white">
+          Watch out! This post is{" "}
+          <strong class="font-medium">over two years old</strong>. Tech moves
+          quickly, so make sure the stuff in this post is still valid before
+          relying on it, especially if you're looking at code samples.
+        </div>
+      )
+    }
     <article
-      class="mb-12 prose prose-neutral prose-pre:!bg-gray-800 md:prose-lg md:prose-pre:leading-normal dark:prose-invert">
+      class="mb-12 prose prose-neutral prose-pre:!bg-gray-800 md:prose-lg md:prose-pre:leading-normal dark:prose-invert"
+    >
       <slot />
     </article>
     <div>
       <p class="mb-4 text-gray-500 dark:text-gray-400">
         Hey, thanks for reading all the way through! If you'd like to get in
-        touch or keep up with what I'm working on, here's where you can find me on the usual places.
+        touch or keep up with what I'm working on, here's where you can find me
+        on the usual places.
       </p>
       <Links />
     </div>

@@ -59,8 +59,8 @@ const Resume: React.FC = () => (
         active={true}
       >
         <div>
-          I'm currently taking on freelance work. Get in touch if you have a
-          project for me!
+          I'm currently taking on freelance work. If you have a project for me,
+          let's talk!
         </div>
       </CVItem>
       <CVItem
@@ -101,8 +101,8 @@ const Resume: React.FC = () => (
         </Tags>
       </CVItem>
       <CVItem
-        title="Infostud Group"
-        companyUrl="https://www.infostud.com/?locale=en"
+        title="Infostud"
+        companyUrl="https://www.infostud.com/en/"
         details={
           <>
             <span className="whitespace-nowrap">
@@ -115,33 +115,38 @@ const Resume: React.FC = () => (
       >
         <div className="flex flex-col gap-3">
           <p>
-            At Infostud, I participated in the development of greenfield
-            projects across the entire stack (frontend, backend, and DevOps), as
-            well as being responsible for maintenance of legacy code, as part of
-            the team behind Poslovi Infostud and HR Lab &mdash; the leading
-            platforms for job seekers and employers in Serbia.
+            At Infostud, I had the opportunity to work at one of the largest
+            internet companies in Serbia, contributed to the development of
+            greenfield projects across the entire stack, and was occasionally
+            responsible for maintenance of legacy code, as part of the team(s)
+            behind{" "}
+            <Link href="https://poslovi.infostud.com/">Poslovi Infostud</Link>{" "}
+            and <Link href="https://www.hrlab.rs/en">HR Lab</Link> &mdash; the
+            leading platforms for job seekers and employers in Serbia.
           </p>
           <p>
-            Tech-wise, I primarily worked with PHP and JavaScript/TypeScript,
-            and deployed (greenfield) projects as container images to an
-            internal Kubernetes cluster.
+            Tech-wise, I mainly worked with PHP and JavaScript/TypeScript, and
+            deployed (non-legacy) code as container images to an internal
+            Kubernetes cluster.
           </p>
+          <p>Some of the things I did in my time at Infostud include:</p>
           <ul className="cv-item-bullets flex flex-col gap-3">
             <li>
-              Worked on the rewrite of Poslovi Infostud's ATS product (now{" "}
+              Worked on the rewrite of Infostud's ATS product (now{" "}
               <Link href="https://www.hrlab.rs/en/hr-lab-asistent">
                 HR Lab Assistant
               </Link>
-              ) using modern tech like PHP 7+, React, GraphQL, Docker, and
+              ) using modern tech like PHP &gt;= 7, React, GraphQL, Docker, and
               Kubernetes. As of 2021, HR Lab Assistant was the most widely-used
               ATS software in Serbia.
             </li>
             <li>
               Built an internal payment platform that integrated with PayPal and
               NestPay (a proprietary payment gateway popular in the region) to
-              enable HR Lab products to easily integrate credit card payments,
-              as well as other payment methods. On average, tens of thousands of
-              dollars worth of payments passed through this service every month.
+              enable HR Lab products to easily integrate credit card payments
+              and other payment methods. When I was at Infostud, tens of
+              thousands of dollars worth of payments passed through this system
+              every month.
             </li>
             <li>
               Maintained{" "}
@@ -152,27 +157,21 @@ const Resume: React.FC = () => (
               unique users.
             </li>
             <li>
-              Built the (as of 2021) current iteration of{" "}
+              Built the then-current iteration of{" "}
               <Link href="https://www.hrlab.rs/en/">HRLab.rs</Link>, the website
-              for the HR Lab brand, in collaboration with a designer, using
-              React and Gatsby, and improving site performance by 300% in the
-              process. I later migrated this site from Gatsby to Next.js, with
-              no need for downtime or a feature freeze.
+              for the HR Lab brand, using React and Gatsby, improving site
+              performance by 300% in the process. I also later migrated this
+              site from Gatsby to Next.js, quickly enough that we didn't need to
+              institute a feature freeze.
             </li>
             <li>
-              Implemented CI/CD pipelines for the team's codebases using GitLab
-              CI/CD, Docker, Kubernetes, and Helm.
+              Built CI/CD pipelines for the team's codebases using GitLab CI/CD,
+              Docker, Kubernetes, and Helm.
             </li>
             <li>
-              Built an OAuth 2-based identity server for the HR Lab platform.
-              This enabled HR Lab products to easily authenticate users through
-              a central location.
-            </li>
-            <li>
-              Built an OAuth 2-based frontend for the company's internal LDAP
-              database, and retrofitted several internal tools to use it. This
-              resulted in a significantly friendlier user experience for
-              employees logging into these tools.
+              Built an OAuth 2.0 identity provider for the HR Lab platform,
+              allowing HR Lab products to easily authenticate users through a
+              central location.
             </li>
           </ul>
         </div>
@@ -236,9 +235,10 @@ const Resume: React.FC = () => (
             there.)
           </p>
           <p>
-            During my internship at Execom, I worked independently on multiple
-            frontend and full-stack projects for about two months, using tech
-            like PHP and AngularJS.
+            I interned at Execom for about a month to fulfill a college
+            requirement. While I was there, I was given multiple small
+            full-stack and frontend projects to build by myself, using tech like
+            PHP and AngularJS.
           </p>
         </div>
         <Tags>

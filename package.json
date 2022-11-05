@@ -1,5 +1,5 @@
 {
-  "name": "@example/basics",
+  "name": "lynn.zone",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -24,5 +24,8 @@
     "date-fns": "^2.29.1",
     "react-icons": "^4.4.0",
     "reading-time": "^1.5.0"
+  },
+  "volta": {
+    "node": "16.18.1"
   }
 }
