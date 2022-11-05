@@ -99,11 +99,13 @@ const Resume: React.FC = () => (
               that isn’t contingent on employment or client work.
             </li>
           </ul>
+
           <p>
             …and while it’s definitely turned out to be more work than I’d
             initially bargained for (what doesn’t?), I’m quite happy with how
             it’s turned out.{" "}
           </p>
+
           <p>
             The tech stack is full-stack TypeScript with Node.js as the
             serverside runtime. The app consists of a number of containerized
@@ -112,7 +114,9 @@ const Resume: React.FC = () => (
             heavily relying on asynchronous communication via{" "}
             <Link href="https://cloud.google.com/pubsub">Cloud Pub/Sub</Link>.{" "}
           </p>
+
           <p>Other tooling and miscellaneous tech choices include: </p>
+
           <ul className="cv-item-bullets flex flex-col gap-1">
             <li>
               <Link href="https://www.docker.com/">Docker</Link> (with{" "}
@@ -152,6 +156,16 @@ const Resume: React.FC = () => (
             </li>
           </ul>
         </div>
+        <Tags>
+          <Tag>JavaScript</Tag>
+          <Tag>TypeScript</Tag>
+          <Tag>Node.js</Tag>
+          <Tag>Google Cloud</Tag>
+          <Tag>React</Tag>
+          <Tag>Next.js</Tag>
+          <Tag>Docker</Tag>
+          <Tag>GraphQL</Tag>
+        </Tags>
       </CVItem> */}
       <CVItem
         title="DataCamp"
