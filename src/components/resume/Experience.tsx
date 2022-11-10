@@ -63,7 +63,7 @@ const Resume: React.FC = () => (
           let's talk!
         </div>
       </CVItem>
-      {/* <CVItem
+      <CVItem
         title="Konbini"
         companyUrl="https://usekonbini.com/"
         details={
@@ -166,7 +166,7 @@ const Resume: React.FC = () => (
           <Tag>Docker</Tag>
           <Tag>GraphQL</Tag>
         </Tags>
-      </CVItem> */}
+      </CVItem>
       <CVItem
         title="DataCamp"
         companyUrl="https://www.datacamp.com/"
