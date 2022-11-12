@@ -423,10 +423,10 @@
   resolved "https://registry.npmjs.org/@fontsource/barlow/-/barlow-4.5.7.tgz#2739217b258887002f07151f0476bddf1058fca7"
   integrity sha512-1NliOxBjbipalO47kOv6ailiL80+BtO6bbyKtR/9KloOffxDTsPR9MhNjRlje+Y3PSk0XkW44qe8ZRDJ7jWsUA==
 
-"@fontsource/fira-code@^4.5.10":
-  version "4.5.10"
-  resolved "https://registry.npmjs.org/@fontsource/fira-code/-/fira-code-4.5.10.tgz#e1060a60d08cba1669e1ff2025350aaab7c0e6bc"
-  integrity sha512-CF6cBJZcpuW+qxtr7JZt3kPwEHj0xWYgsRr7q3tGhkIqEmxdJ6Omvw61LEFQuRXeAwOnXBGZr42qTrO+vCzvAQ==
+"@fontsource/jetbrains-mono@^4.5.11":
+  version "4.5.11"
+  resolved "https://registry.yarnpkg.com/@fontsource/jetbrains-mono/-/jetbrains-mono-4.5.11.tgz#e8055c18246576fbcbeddac4f0b7f8e4b8f45050"
+  integrity sha512-IW1qgWGkjlN1O6Jf+6LWF9DpcdXhyQEXhTlzfVKrWHX+ProuOT5FcrEAj34AR+19CgAb9Sheda2slORnybBsdw==
 
 "@jridgewell/gen-mapping@^0.1.0":
   version "0.1.1"

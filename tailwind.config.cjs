@@ -7,7 +7,7 @@ module.exports = {
     fontFamily: {
       sans: ["Barlow", "sans-serif"],
       mono: [
-        "Fira Code",
+        "JetBrains MonoVariable",
         "Consolas",
         "Andale Mono WT",
         "Andale Mono",
