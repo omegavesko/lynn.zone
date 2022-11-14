@@ -71,9 +71,11 @@ To be clear, I don't think there's anything _inherently_ wrong with content crea
 
 So, should you use a VPN? Maybe! Even knowing that they don't do nearly as much as they claim to, there are still totally legitimate reasons you might want to use one:
 
-- You have reason to be concerned about the possibility of a middleman (your ISP, employer, school, parents, etc.) having access to even very limited data on what you're doing online, or you want to get around filters that rely on that data.
+- You live in an authoritarian state where being found to have engaged in "undesirable activity" comes with potentially grave consequences, and/or want to get around the sweeping internet censorship inevitably done by such states.
 
-- You want to be able to hide your real IP, or make it look like your IP is in a different location. This is quite useful for gaining access to region-locked content on e.g. streaming services, and probably the most common real use case for a VPN.
+- You _don't_ live in an authoritarian state, but still have reason to be concerned about the possibility of a middleman (your ISP, employer, school, parents, etc.) having access to even very limited data on what you're doing online, or you want to get around filters that rely on that data.
+
+- You want to be able to hide your real IP, or make it look like you're in a different location. This is quite useful for gaining access to region-locked content on e.g. streaming services, and probably the most common real use case for a VPN.
 
 That being said, if you're just worried about your passwords getting stolen because you logged into your bank account while on Starbucks Wi-Fi... don't waste your money. You _do not_ need a VPN to enjoy a basic level of online security.
 
